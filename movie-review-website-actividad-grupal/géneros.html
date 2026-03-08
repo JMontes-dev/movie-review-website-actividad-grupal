@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilo.css">
+    <title>Géneros</title>
+
+</head>
+
+<body>
+
+    <header>
+        <div class="divLogo">
+            <a href="index.html">
+                <img id="logo" src="imágenes/Logo.png">
+            </a>
+        </div>
+
+        <nav class="menu">
+            <ul class="menu-list">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="géneros.html">Géneros</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+        <section class="hero">      
+            <div class="hero-content">
+                <h1>Géneros de Películas</h1>
+                <p>Encuentra la reseña de tu película buscándola por su Género</p>
+            </div>
+        </section>
+
+
+    <main>
+
+        <section id="filtro">
+            <input type="radio" id="todos" name="genero" checked>
+            <label for="todos">Todos</label>
+
+            <input type="radio" id="accion" name="genero">
+            <label for="accion">Acción</label>
+
+            <input type="radio" id="cienciaFiccion" name="genero">
+            <label for="cienciaFiccion">Ciencia Ficción</label>
+
+            <input type="radio" id="drama" name="genero">
+            <label for="drama">Drama</label>
+
+            <input type="radio" id="aventura" name="genero">
+            <label for="aventura">Aventura</label>
+
+            <input type="radio" id="terror" name="genero">
+            <label for="terror">Terror</label>
+
+            <div class="movie-container">
+                <div class="movie" id="accion">
+                    <a href="reseñas/scarface.html">
+                        <img class="fotoPelicula" id="fotoScarface" src="imágenes/scarface.jpg">
+                        <h3>Scarface</h3>
+                    </a>
+                </div>
+
+                <div class="movie" id="cienciaFiccion">
+                         <a href="reseñas/interestellar.html">
+                            <img class="fotoPelicula" id="fotoInterestellar"src="imágenes/interestellar.jpg">
+                            <h3>Interestellar</h3>
+                        </a>
+                </div>
+
+                <div class="movie" id="accion">
+                        <a href="reseñas/spiderman.html">
+                            <img class="fotoPelicula" id="fotoSpiderman" src="imágenes/spiderman.jpg">
+                            <h3>Spiderman</h3>
+                        </a>
+                </div>
+
+                <div class="movie" id="aventura">
+                        <a href="reseñas/jumanji.html">
+                            <img class="fotoPelicula" id="fotoSpiderman" src="imágenes/jumanji.jpg">
+                            <h3>Jumanji</h3>
+                        </a>
+                </div>
+
+                <div class="movie" id="drama">
+                        <a href="reseñas/diariodenoa.html">
+                            <img class="fotoPelicula" id="fotoSpiderman" src="imágenes/diariodenoa.jpg">
+                            <h3>El Diario de Noa</h3>
+                        </a>
+                </div>
+
+                <div class="movie" id="terror">
+                        <a href="reseñas/thewitch.html">
+                            <img class="fotoPelicula" id="fotoSpiderman" src="imágenes/thewitch.jpg">
+                            <h3>The Witch</h3>
+                        </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    
+    
+
+
+
+</body>
+</html>
