@@ -15,6 +15,10 @@ body {
     padding: 0; /* Eliminamos el padding lateral para que el header ocupe todo */
 }
 
+main {
+    margin-top: 40px;
+}
+
 a {
     text-decoration: none;
     color: inherit;
@@ -34,9 +38,11 @@ header {
     border-bottom: 2px solid #f5c518;
 }
 
+
 #logo {
-    height: 60px; /* Tamaño ajustado para que no rompa el header */
+    height: 85px; /* Tamaño ajustado para que no rompa el header */
     transition: transform 0.3s;
+    padding: 0px;
 }
 
 #logo:hover {
@@ -52,7 +58,7 @@ header {
 .menu-list a {
     font-weight: bold;
     text-transform: uppercase;
-    font-size: 0.9rem;
+    font-size: 1.0rem;
     transition: color 0.3s;
 }
 
@@ -64,6 +70,7 @@ header {
 
 .section {
     padding: 4rem 5%;
+    font-size: 20px;
 }
 
 .section h2 {
@@ -72,6 +79,7 @@ header {
     margin-bottom: 20px;
     font-size: 2rem;
 }
+
 
 /* Contenedor tipo panel para organizar contenido */
 .caja { 
@@ -82,6 +90,7 @@ header {
     margin-bottom: 20px; 
     text-align: center;
 }
+
 
 /* Estructura de columnas (Flexbox) */
 .contenedor-central { 
@@ -120,12 +129,20 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+    border-bottom: 2px solid #f5c518;
+    
 }
 
 .hero-content h1 {
     font-size: 4rem;
     color: #f5c518;
     text-shadow: 2px 2px 10px rgba(0,0,0,0.8);
+    text-align: center;
+}
+
+.hero-content p {
+    font-size: 23px;
+    font-weight: bold;
 }
 
 /* TARJETAS DE PELÍCULAS (Index y Listados) */
@@ -135,6 +152,8 @@ header {
     flex-wrap: wrap;
     gap: 30px;
     justify-content: center;
+    margin-top: 2.5%;
+    text-align: center;
 }
 
 /* Estilo individual de cada tarjeta de película */
@@ -191,9 +210,9 @@ th {
 }
 
 .caja h2 + p {
-    font-size: 1.5rem;
-    font-weight: bold;
+    font-size: 1.2rem;
     color: #f5c518;
+    text-align: center;
 }
 
 /* FILTROS DE GÉNERO (Lógica de selección) */
@@ -223,14 +242,18 @@ th {
 /* Cambio de color cuando el radio button está seleccionado */
 #filtro input[type="radio"]:checked + label {
     background-color: #f5c518;
-    color: #121212;
+    color: #000000;
+    font-weight: bold;
 }
 
 /* Lógica de filtrado mediante selectores de hermanos */
-#todos:checked ~ .movies .movie { display: block; }
-#accion:checked ~ .movies .movie:not(.accion) { display: none; }
-#comedia:checked ~ .movies .movie:not(.comedia) { display: none; }
-#drama:checked ~ .movies .movie:not(.drama) { display: none; }
+#todos:checked ~ .movie-container { display: block; }
+#accion:checked ~ .movie-container .movie:not(#accion) { display: none; }
+#cienciaFiccion:checked ~ .movie-container .movie:not(#cienciaFiccion) { display: none; }
+#drama:checked ~ .movie-container .movie:not(#drama) { display: none; }
+#aventura:checked ~ .movie-container .movie:not(#aventura) { display: none; }
+#terror:checked ~ .movie-container .movie:not(#terror) { display: none; }
+
 
 /* FORMULARIO DE CONTACTO */
 
