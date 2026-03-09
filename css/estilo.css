@@ -1,0 +1,322 @@
+/*  ESTILOS GLOBALES Y VARIABLES DE DISEÑO
+    Colores principales: Amarillo (#f5c518), Oscuro (#121212), Gris (#1f1f1f) */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Para que el padding no afecte al ancho total */
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #121212; /* Fondo oscuro tipo cine */
+    color: #ffffff;
+    line-height: 1.6;
+    padding: 0; /* Eliminamos el padding lateral para que el header ocupe todo */
+}
+
+main {
+    margin-top: 40px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* HEADER Y NAVEGACIÓN (Común en todas las páginas) */
+
+header {
+    background-color: #1f1f1f;
+    padding: 1rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky; /* Para que se mantenga fijo arriba al hacer scroll */
+    top: 0;
+    z-index: 1000;
+    border-bottom: 2px solid #f5c518;
+}
+
+
+#logo {
+    height: 85px; /* Tamaño ajustado para que no rompa el header */
+    transition: transform 0.3s;
+    padding: 0px;
+}
+
+#logo:hover {
+    transform: scale(1.1); /* Efecto de agrandado al pasar el ratón */
+}
+
+.menu-list {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.menu-list a {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 1.0rem;
+    transition: color 0.3s;
+}
+
+.menu-list a:hover {
+    color: #f5c518;
+}
+
+/* COMPONENTES REUTILIZABLES (Cajas y Secciones)*/
+
+.section {
+    padding: 4rem 5%;
+    font-size: 20px;
+}
+
+.section h2 {
+    border-left: 5px solid #f5c518;
+    padding-left: 15px;
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+
+/* Contenedor tipo panel para organizar contenido */
+.caja { 
+    background-color: #1f1f1f;
+    border: 1px solid #333; 
+    border-radius: 10px; 
+    padding: 20px; 
+    margin-bottom: 20px; 
+    text-align: center;
+}
+
+
+/* Estructura de columnas (Flexbox) */
+.contenedor-central { 
+    display: flex; 
+    gap: 20px; 
+    margin-bottom: 20px;
+    flex-wrap: wrap; /* Permite que bajen en pantallas pequeñas */
+}
+
+.columna-izq { 
+    flex: 1; 
+    min-width: 300px;
+    display: flex; 
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
+    gap: 15px;
+}
+
+.columna-der {
+     flex: 1; 
+     min-width: 300px;
+     display: flex; 
+     flex-direction: column; 
+     gap: 20px; 
+}
+
+/* HERO / BANNER DE BIENVENIDA */
+
+.hero {
+    height: 60vh;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                url('https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=1350&q=80');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 2px solid #f5c518;
+    
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    color: #f5c518;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.8);
+    text-align: center;
+}
+
+.hero-content p {
+    font-size: 23px;
+    font-weight: bold;
+}
+
+/* TARJETAS DE PELÍCULAS (Index y Listados) */
+
+.movie-container .movie {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    margin-top: 2.5%;
+    text-align: center;
+}
+
+/* Estilo individual de cada tarjeta de película */
+.movie a, .movie div {
+    width: 250px;
+    background-color: #1f1f1f;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    padding-bottom: 15px;
+}
+
+.movie a:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(245, 197, 24, 0.2);
+}
+
+/* Ajuste universal para imágenes de películas */
+.fotoPelicula {
+    width: 100%;
+    height: 400px;
+    object-fit: cover; /* Evita que la imagen se deforme */
+    border-bottom: 2px solid #f5c518;
+}
+.columna-izq img {
+    height: auto; /* Permite que la imagen mantenga su proporción */
+    width: auto;
+    max-width: 350px;
+    object-fit: contain;
+    border: 2px solid #f5c518;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.7);
+    display: block;
+    margin: 0 auto;
+}
+
+/* PÁGINA DE RESEÑA */
+
+table {
+    width: 100%; 
+    border-collapse: collapse; 
+    text-align: left;
+}
+
+th, td {
+    border-bottom: 1px solid #333; 
+    padding: 12px; 
+}
+
+th {
+    color: #f5c518;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+.caja h2 + p {
+    font-size: 1.2rem;
+    color: #f5c518;
+    text-align: center;
+}
+
+/* FILTROS DE GÉNERO (Lógica de selección) */
+
+#filtro {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Ocultamos el radio button real */
+#filtro input[type="radio"] {
+    display: none;
+}
+
+/* Estilizamos el label como un botón */
+#filtro label {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 2px solid #f5c518;
+    color: #f5c518;
+    border-radius: 20px;
+    cursor: pointer;
+    margin: 5px;
+    transition: 0.3s;
+}
+
+/* Cambio de color cuando el radio button está seleccionado */
+#filtro input[type="radio"]:checked + label {
+    background-color: #f5c518;
+    color: #000000;
+    font-weight: bold;
+}
+
+/* Lógica de filtrado mediante selectores de hermanos */
+#todos:checked ~ .movie-container { display: block; }
+#accion:checked ~ .movie-container .movie:not(#accion) { display: none; }
+#cienciaFiccion:checked ~ .movie-container .movie:not(#cienciaFiccion) { display: none; }
+#drama:checked ~ .movie-container .movie:not(#drama) { display: none; }
+#aventura:checked ~ .movie-container .movie:not(#aventura) { display: none; }
+#terror:checked ~ .movie-container .movie:not(#terror) { display: none; }
+
+
+/* FORMULARIO DE CONTACTO */
+
+.form-contacto {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: left;
+}
+
+.grupo-input {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.grupo-input label {
+    color: #f5c518;
+    font-weight: bold;
+}
+
+.grupo-input input, .grupo-input textarea {
+    background-color: #121212;
+    border: 1px solid #333;
+    color: white;
+    padding: 12px;
+    border-radius: 5px;
+}
+
+.grupo-input input:focus {
+    border-color: #f5c518;
+    outline: none;
+}
+
+.boton-enviar {
+    background-color: #f5c518;
+    color: #121212;
+    padding: 15px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.info-item {
+    width: 100%;
+    padding: 15px;
+    border-left: 3px solid #f5c518;
+    background: #181818;
+    text-align: left;
+}
+
+/* FOOTER */
+
+footer {
+    background-color: #1f1f1f;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 50px;
+    border-top: 1px solid #333;
+}
+
+footer p {
+    color: #aaa;
+    font-size: 0.8rem;
+}
