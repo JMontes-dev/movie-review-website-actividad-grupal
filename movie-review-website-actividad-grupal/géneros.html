@@ -1,24 +1,27 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es"> <!--Define que el idioma principal de la página es el español.-->
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/estilo.css">
-    <title>Géneros</title>
+    <meta charset="UTF-8"> <!--Asegura que carácteres especiales como la ñ o acentos se muestren correctamente-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Diseño responsivo(el contenido se muestre bien en todas las pantallas)--> 
+    <link rel="stylesheet" href="css/estilo.css">  <!--Conecta nuestro archivo HTML con la hoja de estilos CSS-->
+    <title>Géneros</title>  <!--Título que aparece en la pestaña del navegador-->
 
 </head>
 
+<!--Body: Todo lo que sera visible en nuestra página web-->
 <body>
 
+<!--Cabecera y navegación-->
     <header>
+<!--El usuario al hacer click en el logo lo lleva de vuelta a la pagina principal-->
         <div class="divLogo">
-            <a href="index.html">
-                <img id="logo" src="imágenes/Logo.png">
+            <a href="index.html"> <!--Etiqueta de enlace-->
+                <img id="logo" src="imágenes/Logo.png"> <!--Etiqueta de imagen del logo-->
             </a>
         </div>
-
+<!--Menu de navegación-->
         <nav class="menu">
-            <ul class="menu-list">
+            <ul class="menu-list"> <!--Lista desordenada con enlaces a diferentes páginas-->
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="géneros.html">Géneros</a></li>
                 <li><a href="contacto.html">Contacto</a></li>
@@ -26,22 +29,28 @@
         </nav>
     </header>
 
+<!--Definimos la seccion principal a traves de la clase hero para darle mayor enfoque y/o visibilidad -->
         <section class="hero">      
             <div class="hero-content">
-                <h1>Géneros de Películas</h1>
+                <h1>Géneros de Películas</h1> <!--Título principal-->
                 <p>Encuentra la reseña de tu película buscándola por su Género</p>
             </div>
         </section>
 
-
+<!--En el main introducimos el contenido principal-->
     <main>
-
+<!--Sistema de filtros, utilizamos botones de radio buttons para cada uno-->
         <section id="filtro">
+            <!--ponemos a todos los input el mismo atributo name= genero para que
+            el usuario solo pueda seleccionar uno a la vez-->
             <input type="radio" id="todos" name="genero" checked>
             <label for="todos">Todos</label>
-
+<!--Utilizamos el atributo for en las etiquetas label para que coincidan con el id de cada input-->
             <input type="radio" id="accion" name="genero">
             <label for="accion">Acción</label>
+
+            <input type="radio" id="superheroes" name="genero">
+            <label for="superheroes">Superhéroes</label>
 
             <input type="radio" id="cienciaFiccion" name="genero">
             <label for="cienciaFiccion">Ciencia Ficción</label>
@@ -49,11 +58,20 @@
             <input type="radio" id="drama" name="genero">
             <label for="drama">Drama</label>
 
+            <input type="radio" id="romance" name="genero">
+            <label for="romance">Romance</label>
+
             <input type="radio" id="aventura" name="genero">
             <label for="aventura">Aventura</label>
 
             <input type="radio" id="terror" name="genero">
             <label for="terror">Terror</label>
+
+            <input type="radio" id="thriller" name="genero">
+            <label for="thriller">Thriller</label>
+
+<!--A traves del siguiente contenedor, organizamos 
+los enlaces a las películas a través del genero de cada peli-->
 
             <div class="movie-container">
                 <div class="movie" id="accion">
@@ -70,7 +88,7 @@
                         </a>
                 </div>
 
-                <div class="movie" id="accion">
+                <div class="movie" id="superheroes">
                         <a href="reseñas/spiderman.html">
                             <img class="fotoPelicula" id="fotoSpiderman" src="imágenes/spiderman.jpg">
                             <h3>Spiderman</h3>
@@ -79,33 +97,50 @@
 
                 <div class="movie" id="aventura">
                         <a href="reseñas/jumanji.html">
-                            <img class="fotoPelicula" id="fotoSpiderman" src="imágenes/jumanji.jpg">
+                            <img class="fotoPelicula" id="fotoJumanji" src="imágenes/jumanji.jpg">
                             <h3>Jumanji</h3>
                         </a>
                 </div>
 
-                <div class="movie" id="drama">
+                <div class="movie" id="romance">
                         <a href="reseñas/diariodenoa.html">
-                            <img class="fotoPelicula" id="fotoSpiderman" src="imágenes/diariodenoa.jpg">
+                            <img class="fotoPelicula" id="fotoDiarioNoa" src="imágenes/diariodenoa.jpg">
                             <h3>El Diario de Noa</h3>
+                        </a>
+                </div>
+
+                <div class="movie" id="drama">
+                        <a href="reseñas/intocable.html">
+                            <img class="fotoPelicula" id="fotoIntocable" src="imágenes/intocable.jpg">
+                            <h3>Intocable</h3>
                         </a>
                 </div>
 
                 <div class="movie" id="terror">
                         <a href="reseñas/thewitch.html">
-                            <img class="fotoPelicula" id="fotoSpiderman" src="imágenes/thewitch.jpg">
+                            <img class="fotoPelicula" id="fotoWitch" src="imágenes/thewitch.jpg">
                             <h3>The Witch</h3>
                         </a>
                 </div>
+
+                <div class="movie" id="thriller">
+                        <a href="reseñas/vertigo.html">
+                            <img class="fotoPelicula" id="fotoVertigo" src="imágenes/vertigo.jpg">
+                            <h3>Vertigo</h3>
+                        </a>
+                </div>
+
             </div>
         </section>
 
     </main>
 
-    
-    
-
-
+<!--Cerramos la página con un pie de página donde incluimos pequeños detalles como derechos de autor, privacidad, etc-->
+        <footer>
+            <p>© 2026 MovieViewer. Todos los derechos reservados</p>
+            <p>Política de privacidad | Términos y condiciones</p>
+            <p>Contacto: movieviewer@info.com</p>
+        </footer>
 
 </body>
 </html>

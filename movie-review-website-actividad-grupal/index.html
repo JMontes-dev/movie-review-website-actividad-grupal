@@ -1,25 +1,27 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es"> <!--Define que el idioma principal de la página es el español.-->
     <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="css/estilo.css">
-        <title>MovieViewer</title>
+        <meta charset="UTF-8"> <!--Asegura que carácteres especiales como la ñ o acentos se muestren correctamente-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Diseño responsivo(el contenido se muestre bien en todas las pantallas)-->
+        <link rel="stylesheet" href="css/estilo.css"> <!--Conecta nuestro archivo HTML con la hoja de estilos CSS-->
+        <title>MovieViewer</title> <!--Título que aparece en la pestaña del navegador-->
     </head>
     
+    <!--Body: Todo lo que sera visible en nuestra página web-->
     <body>
     
-
+    <!--Cabecera y navegación-->
         <header>
 
+            <!--El usuario al hacer click en el logo lo lleva de vuelta a la pagina principal-->
             <div class="divLogo">
                 <a href="index.html">
                     <img id="logo" src="imágenes/Logo.png">
                 </a>
             </div>
-
+    <!--Menu de navegación-->
             <nav class="menu">
-                <ul class="menu-list">
+                <ul class="menu-list"> <!--Lista desordenada con enlaces a diferentes páginas-->
                     <li><a href="géneros.html">Géneros</a></li>
                     <li><a href="#ultimasReseñas">Últimas Reseñas</a></li>
                     <li><a href="#topPeliculas">Top películas</a></li>
@@ -30,29 +32,31 @@
 
         </header>
 
-
+        <!--Definimos la seccion principal a traves de la clase hero para darle mayor enfoque y/o visibilidad -->
         <section class="hero">      
             <div class="hero-content">
-                <h1>MovieViewer</h1>
-                <p>El Mejor Sitio Web para los amantes del Cine</p>
+                <h1>MovieViewer</h1> <!--Título principal-->
+                <p>El Mejor Sitio Web para los amantes del Cine</p> <!--Pequeño eslogan de la página en una etíqueta de párrafo-->
             </div>
         </section>
 
+<!--En el main introducimos el contenido principal-->
         <main>
 
             <section id="ultimasReseñas" class="section"> 
-                <h2>Últimas reseñas</h2>    
+                <h2>Últimas reseñas</h2>   <!--Subtítulo-->
                 <p>Explora nuestras últimas películas reseñadas</p> 
+<!--A traves de la siguiente etiqueta div, organizamos los enlaces a las ultimas películas reseñadas-->
                 <div class="movie-container">
                     <div class="movie">
-                        <a href="reseñas/jumanji.html">
-                            <img class="fotoPelicula" id="fotoJumanji"src="imágenes/Jumanji.jpg">
-                            <h3>Jumanji</h3>
+                        <a href="reseñas/jumanji.html"> <!--Enlace a la película-->
+                            <img class="fotoPelicula" id="fotoJumanji"src="imágenes/Jumanji.jpg"> 
+                            <h3>Jumanji</h3> <!--Subtítulo de 3 nivel-->
                         </a>
  
                         <a href="reseñas/diariodenoa.html">
-                            <img class="fotoPelicula" id="fotoDiarioNoa" src="imágenes/diariodenoa.jpg">
-                            <h3>El Diario de Noa</h3>
+                            <img class="fotoPelicula" id="fotoDiarioNoa" src="imágenes/diariodenoa.jpg"> <!--etiqueta imagen con  dirección ubicación archivo e ID -->
+                            <h3>El Diario de Noa</h3> 
                         </a>
 
                         <a href="reseñas/thewitch.html">
@@ -60,13 +64,18 @@
                             <h3>The Witch</h3>
                         </a>
 
+                        <a href="reseñas/vertigo.html">
+                            <img class="fotoPelicula" id="fotoVertigo" src="imágenes/vertigo.jpg">
+                            <h3>Vertigo</h3>
+                        </a>
+
                     </div>
                 </div>
             </section>
-
+<!--Sección donde definimos las películas mejor valoradas-->
             <section id="topPeliculas" class="section"> 
                 <h2>Películas mejor Valoradas</h2>     
-                <p>Encuentra las películas más destacadas por su valoración</p>
+                <p>Encuentra las películas más destacadas por su valoración</p> 
                 <div class="movie-container">
                     <div class="movie">
                         <a href="reseñas/interestellar.html">
@@ -84,10 +93,16 @@
                             <h3>Spiderman</h3>
                         </a>
 
+                        <a href="reseñas/intocable.html">
+                            <img class="fotoPelicula" id="fotoIntocable" src="imágenes/intocable.jpg">
+                            <h3>Intocable</h3>
+                        </a>
+
                     </div>
                 </div>
             </section>
-
+<!--En la siguiente sección definimos los diferentes div que contienen las caracteristicas de cada pelicula, que
+al ser próximos estrenos, no tienen reseñas todavía, por eso no incluimos etiquetas a o enlaces-->
             <section id="estrenos" class="section"> 
                 <h2>Próximos Estrenos</h2>   
                 <p>Entérate de las películas próximas a estrenarse</p>  
@@ -96,7 +111,7 @@
                         <div id="divTorrente">
                             <img class="fotoPelicula" id="fotoTorrente"src="imágenes/torrente.jpg">
                             <h3>Torrente Presidente</h3>
-                            <h4>13 de marzo de 2026</h4>
+                            <h4>13 de marzo de 2026</h4> <!--Subtítulo de nivel 4-->
                         </div>
  
                         <div id="divMario">
@@ -116,10 +131,10 @@
                     </div>
                 </div>
             </section>
-
+<!--Aqui termina el main o parte principal de nuestra página-->
         </main>
 
-
+<!--Cerramos la página con un pie de página donde incluimos pequeños detalles como derechos de autor, privacidad, etc-->
         <footer>
             <p>© 2026 MovieViewer. Todos los derechos reservados</p>
             <p>Política de privacidad | Términos y condiciones</p>

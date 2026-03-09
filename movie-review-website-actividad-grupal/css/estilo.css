@@ -249,11 +249,13 @@ th {
 /* Lógica de filtrado mediante selectores de hermanos */
 #todos:checked ~ .movie-container { display: block; }
 #accion:checked ~ .movie-container .movie:not(#accion) { display: none; }
+#superheroes:checked ~ .movie-container .movie:not(#superheroes) { display: none; }
 #cienciaFiccion:checked ~ .movie-container .movie:not(#cienciaFiccion) { display: none; }
+#romance:checked ~ .movie-container .movie:not(#romance) { display: none; }
 #drama:checked ~ .movie-container .movie:not(#drama) { display: none; }
 #aventura:checked ~ .movie-container .movie:not(#aventura) { display: none; }
 #terror:checked ~ .movie-container .movie:not(#terror) { display: none; }
-
+#thriller:checked ~ .movie-container .movie:not(#thriller) { display: none; }
 
 /* FORMULARIO DE CONTACTO */
 

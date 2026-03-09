@@ -1,21 +1,24 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es"> <!--Define que el idioma principal de la página es el español.-->
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/estilo.css">
-    <title>Contacto - MovieViewer</title>
+    <meta charset="UTF-8">  <!--Asegura que carácteres especiales como la ñ o acentos se muestren correctamente-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!--Diseño responsivo(el contenido se muestre bien en todas las pantallas)-->
+    <link rel="stylesheet" href="css/estilo.css">  <!--Conecta nuestro archivo HTML con la hoja de estilos CSS-->
+    <title>Contacto - MovieViewer</title> <!--Título que aparece en la pestaña del navegador-->
 </head>
 
+<!--Body: Todo lo que sera visible en nuestra página web-->
 <body>
 
+    <!--Cabecera y navegación-->
     <header>
+ <!--El usuario al hacer click en el logo lo lleva de vuelta a la pagina principal-->
         <div class="divLogo">
             <a href="index.html">
                 <img id="logo" src="imágenes/Logo.png">
             </a>
         </div>
-
+<!--Menu de navegación-->
         <nav class="menu">
             <ul class="menu-list">
                 <li><a href="index.html">Inicio</a></li>
@@ -25,11 +28,13 @@
         </nav>
     </header>
 
+    <!--Main o parte principal-->
     <main class="section">
-        <h1>Contacta con Nosotros</h1>
+        <h1>Contacta con Nosotros</h1> <!--Título principal-->
         <p style="text-align: center; margin-bottom: 2rem;">¿Tienes alguna sugerencia o quieres que reseñemos una película? ¡Escríbenos!</p>
 
         <div class="contenedor-central">
+            <!--En esta sección incluimos un formulario de contacto-->
             <section class="caja columna-der">
                 <form action="#" method="post" class="form-contacto">
                     <div class="grupo-input">
@@ -50,7 +55,7 @@
                     <button type="submit" class="boton-enviar">Enviar Mensaje</button>
                 </form>
             </section>
-
+<!--Aquí publicamos nuestros datos personales de contacto-->
             <section class="caja columna-izq">
                 <h2>Información de Contacto</h2>
                 <div class="info-item">
@@ -65,7 +70,7 @@
             </section>
         </div>
     </main>
-
+<!--Pie de página-->
     <footer>
         <p>© 2026 MovieViewer. Todos los derechos reservados</p>
         <p>Contacto: movieviewer@info.com</p>

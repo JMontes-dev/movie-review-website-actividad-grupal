@@ -1,26 +1,28 @@
 
-<!DOCTYPE html>
+<!DOCTYPE html>  <!--Define que el idioma principal de la página es el español.-->
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/estilo.css">
-    <title>Reseña de Película</title>
+<head> <!--aqui metemos nuestras etiquetas meta-->
+    <meta charset="UTF-8">  <!--Asegura que carácteres especiales como la ñ o acentos se muestren correctamente-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--diseño responsivo-->
+    <link rel="stylesheet" href="../css/estilo.css">  <!--Conecta nuestro html con el css-->
+    <title>Reseña de Película</title>  <!--Titulo que aparece en la pestaña del navegador-->
     
 </head>
-
+<!--Body: Todo lo que sera visible en nuestra página web-->
 <body>
 
+      <!--Cabecera y navegación-->
         <header>
-
+<!--contenedor logo-->
             <div class="divLogo">
+<!--El usuario al hacer click en el logo lo lleva de vuelta a la pagina principal-->
                 <a href="../index.html">
-                <img id="logo" src="/Ejercicios_L_Marcas/movie-review-website-actividad-grupal/imágenes/Logo.png">
+                <img id="logo" src="../imágenes/Logo.png">
                 </a>
             </div>
-
+<!--Menu de navegación-->
             <nav class="menu">
-                <ul class="menu-list">
+                <ul class="menu-list">  <!--Lista desordenada con enlaces a diferentes páginas-->
                     <a href="../index.html">Inicio</a> 
                     <a href="../géneros.html">Géneros</a>  
                     <a href="../contacto.html">Contacto</a>
@@ -28,16 +30,16 @@
             </nav>
 
         </header>
-
+<!--Parte principal o main-->
     <main>
-        
+<!--contenedor central con  sección que contiene imagen de la peli-->   
         <div class="contenedor-central">
             
             <section class="caja columna-izq">
                 <h1>The Witch</h1>
                 <img id="fotoReseñaWitch" src="../imágenes/thewitch.jpg">
             </section>
-
+<!--contenedor tabla ficha técnica-->
             <div class="columna-der">
                 <section class="caja">
                     <h2>Ficha Técnica</h2>
@@ -56,7 +58,7 @@
                         </tr>
                     </table>
                 </section>
-
+<!--Lista desordenada donde introducimos el reparto de la peli-->
                 <section class="caja">
                     <h2>Lista Reparto</h2>
                     <ul style="text-align: left;">
@@ -68,19 +70,22 @@
             </div>
             
         </div>
-
+<!--Sección de la sinopsis de la peli-->
         <section class="caja">
             <h2>Sinopsis peli</h2>
-            <p>William, su esposa y sus cinco hijos son desterrados de su pueblo y se ven obligados a construir un nuevo hogar a las afueras de un inhóspito bosque. El delito de William ha sido acusar a los miembros de su comunidad de no ser verdaderos cristianos y proclamar que él es el único que predica el verdadero Evangelio.</p>
+            <p>William, su esposa y sus cinco hijos son desterrados de su pueblo 
+            y se ven obligados a construir un nuevo hogar a las afueras de un inhóspito
+            bosque. El delito de William ha sido acusar a los miembros de su comunidad de 
+            no ser verdaderos cristianos y proclamar que él es el único que predica el verdadero Evangelio.</p>
         </section>
-
+<!--Apartado reseña o calificación peli-->
         <section class="caja">
             <h2>Reseña peli</h2>
             <p>6,3/10</p>
         </section>
 
     </main>
-
+<!--Pie de página donde incluimos derechos de autor, privacidad,etc -->
     <footer class="caja">
         <p>© 2026 MovieViewer. Todos los derechos reservados</p>
             <p>Política de privacidad | Términos y condiciones</p>
